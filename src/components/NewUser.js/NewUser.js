@@ -5,10 +5,14 @@ import NewUserForm from './NewUserForm';
 
 // import {useState} from 'react';
 
-const NewUser = () => {
+const NewUser = (props) => {
+
+    const newUserHandler = (userData) => {
+        props.onNewUser(userData)
+    }
     return (
         <Card className="new-user">
-            <NewUserForm />
+            <NewUserForm onNewUser={newUserHandler} />
         </Card>
     );
 };
