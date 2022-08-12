@@ -19,7 +19,7 @@ const Modal = (props) => {
                         <p>{props.content}</p>
                     </div>
                     <div className={styles.actionBar}>
-                        <Button onClick={closeModalHandler}>OK</Button>
+                        <Button onClick={closeModalHandler} title='OK'/>
                     </div>
                 </div>
             </Card>

@@ -1,4 +1,4 @@
-.button{
+button {
   appearance: none;
   background: linear-gradient(to left, #4884EE, #06bcfb);
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -24,33 +24,33 @@
   word-wrap: break-word;
 }
 
-.button:hover {
+button:hover {
   background-color: linear-gradient(to left, #4884EE, #06bcfb);
   text-decoration: none;
   transition-duration: 0.1s;
 }
 
-.button:disabled {
+button:disabled {
   background-color: linear-gradient(to left, #4884EE, #06bcfb);
   border-color: rgba(27, 31, 35, 0.15);
   color: white;
   cursor: default;
 }
 
-.button:active {
-  background-color:linear-gradient(to left, #4884EE, #06bcfb);
+button:active {
+  background-color: linear-gradient(to left, #4884EE, #06bcfb);
   box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
   transition: none 0s;
 }
 
-.button:focus {
+button:focus {
   outline: 1px transparent;
 }
 
-.button:before {
+button:before {
   display: none;
 }
 
-.button:-webkit-details-marker {
+button:-webkit-details-marker {
   display: none;
 }

@@ -1,9 +1,9 @@
-import styles from './Button.module.css';
+import './Button.module.css';
 
 const Button = (props) => {
     return (
-        <button className={styles.button}>
-            {props.children}
+        <button>
+            {props.title}
         </button>
     );
 };
