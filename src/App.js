@@ -2,6 +2,7 @@ import './App.css';
 
 import UsersList from './components/Users/UsersList';
 import NewUser from './components/NewUser.js/NewUser';
+import Modal from './components/UI/Modal/Modal';
 
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ function App() {
     { id: '02', username: 'another-name', age: 22, }
   ];
 
+  const [modalActive, setsModalActive] = useState(true);
   const [usersData, setUserData] = useState(testUsers);
 
   const newUserHandler = (user) => {
@@ -20,10 +22,16 @@ function App() {
     })
   };
 
+  const closeModalHandler = () =>{
+    setsModalActive(false);
+  }
+
   return (
     <div className="App">
       <NewUser onNewUser={newUserHandler} />
       <UsersList items={usersData} />
+
+     { modalActive && <Modal onCloseModal={closeModalHandler} title='Error' content='error desc'></Modal>}
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 400px;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    padding: 1rem 1.25rem;
+}
+
+.content {
+    padding: 1rem 1.25rem;
+}
+
+.actionBar {
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+}
