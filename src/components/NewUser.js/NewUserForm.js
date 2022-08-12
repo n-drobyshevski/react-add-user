@@ -18,13 +18,11 @@ const NewUserForm = (props) => {
 
     const formSubmitHandler = (event) => {
         event.preventDefault();
-        console.log('form submit')
         const userData = {
             username: userName,
             age: userAge,
             id: Math.random()
         };
-        console.log(userData);
         props.onNewUser(userData);
     };
 
@@ -33,11 +31,18 @@ const NewUserForm = (props) => {
             <div className={styles.controls}>
                 <div className={styles.control}>
                     <label>Username</label>
-                    <input value={userName} onChange={usernameChangeHandler} type='text'></input>
+                    <input value={userName}
+                        onChange={usernameChangeHandler}
+                        type='text'></input>
                 </div>
                 <div className={styles.control}>
                     <label>Age</label>
-                    <input value={userAge} onChange={ageChangeHandler} type='number'></input>
+                    <input
+                        value={userAge}
+                        onChange={ageChangeHandler}
+                        type='number'
+                        min={1}
+                        max={100}></input>
                 </div>
                 <Button type='submit' title="Add user" />
             </div>

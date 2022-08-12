@@ -2,8 +2,7 @@ import styles from './UserItem.module.css';
 
 import Card from '../UI/Card';
 
-const UserItem = (props) => {
-    console.log(props)
+const UserItem = (props) =>{ 
     return (
         <Card>
             <div className={styles.container}>
